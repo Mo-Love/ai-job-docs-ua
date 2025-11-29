@@ -1,0 +1,28 @@
+/* файл: src/app/globals.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Базові кольори: дуже темно-синій/чорний */
+  --background: #080A1F; 
+  --foreground: #ededed;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Inter, Arial, sans-serif; /* Використовуємо сучасний шрифт */
+  
+  /* Додаємо атмосферний градієнт, що імітує неонове світіння */
+  background-image: 
+    radial-gradient(circle at 15% 15%, rgba(135, 90, 250, 0.08) 0%, transparent 25%),
+    radial-gradient(circle at 85% 85%, rgba(250, 90, 220, 0.08) 0%, transparent 25%);
+  min-height: 100vh;
+}
+
+/* Прибираємо синій контур фокусу за замовчуванням */
+input:focus, textarea:focus, button:focus {
+  outline: none;
+}
